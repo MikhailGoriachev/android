@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AnimalEditActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!-- Ввод информация о домашнем животном -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Заголовок -->
+            <TextView
+                android:id="@+id/txv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_animal_title"
+                android:textAlignment="center"
+                android:textSize="@dimen/xxl_text" />
+
+            <!-- Изображение -->
+            <ImageView
+                android:id="@+id/ivw_animal_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/description_image_animal"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/icon" />
+
+
+            <!-- Кличка -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/animal_name_label"
+                android:textSize="@dimen/xl_text" />
+
+            <EditText
+                android:id="@+id/etx_animal_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:autofillHints=""
+                android:hint="@string/hint_animal_name"
+                android:inputType="text"
+                android:textSize="@dimen/xl_text" />
+
+            <!-- Порода -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/animal_breed_label"
+                android:textSize="@dimen/xl_text" />
+
+            <Spinner
+                android:id="@+id/spn_breed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Возраст -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/animal_age_label"
+                android:textSize="@dimen/xl_text" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <EditText
+                    android:id="@+id/etx_animal_age"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="80"
+                    android:autofillHints=""
+                    android:hint="@string/hint_animal_age"
+                    android:inputType="number" />
+
+                <!-- Увеличить на год -->
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_weight="10"
+                    android:onClick="increaseAge"
+                    android:text="@string/increase_label" />
+
+                <!-- Уменьшить на год -->
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:onClick="decreaseAge"
+                    android:text="@string/decrease_label" />
+
+            </LinearLayout>
+
+            <!-- Вес -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/animal_weight_label"
+                android:textSize="@dimen/xl_text" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <EditText
+                    android:id="@+id/etx_animal_weight"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="80"
+                    android:autofillHints=""
+                    android:hint="@string/hint_animal_weight"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/xl_text" />
+
+                <!-- Увеличить на килограмм -->
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_weight="10"
+                    android:onClick="increaseWeight"
+                    android:text="@string/increase_label" />
+
+                <!-- Уменьшить на килограмм -->
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:onClick="decreaseWeight"
+                    android:text="@string/decrease_label" />
+
+            </LinearLayout>
+
+            <!-- Валаелец -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/animal_owner_label"
+                android:textSize="@dimen/xl_text" />
+
+            <EditText
+                android:id="@+id/etx_animal_owner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:autofillHints=""
+                android:hint="@string/hint_animal_owner"
+                android:inputType="text"
+                android:textSize="@dimen/xl_text" />
+
+            <!-- Специальная диета -->
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/swt_animal_special_diet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/animal_special_diet_label" />
+
+            <!-- Полу-вольное содержание -->
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/swt_animal_free_keeping"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/animal_free_keeping_label" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- Кнопка "Сохранить" -->
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/holo_green_dark"
+                android:onClick="save"/>
+
+            <!-- Кнопка "Сбросить" -->
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                android:onClick="reset"
+                android:text="@string/reset_label" />
+
+            <!-- Кнопка "Отмена" -->
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:onClick="finish"
+                android:text="@string/cancel_label" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

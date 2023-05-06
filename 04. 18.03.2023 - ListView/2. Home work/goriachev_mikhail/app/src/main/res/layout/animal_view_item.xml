@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:id="@+id/lay_animal_item">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivw_animal_image"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/icon"
+            app:riv_corner_radius="35dp"
+            app:riv_border_width="0dp"
+            app:riv_border_color="#333"/>
+
+        <!-- Информация о домашнем животном -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Кличка -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/animal_name_label"
+                    android:textSize="@dimen/xl_text" />
+
+                <TextView
+                    android:id="@+id/txv_animal_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textSize="@dimen/xl_text" />
+            </LinearLayout>
+
+            <!-- Порода -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/animal_breed_label"
+                    android:textSize="@dimen/xl_text" />
+
+                <TextView
+                    android:id="@+id/txv_animal_breed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textSize="@dimen/xl_text" />
+            </LinearLayout>
+
+            <!-- Владелец -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/animal_owner_label"
+                    android:textSize="@dimen/xl_text" />
+
+                <TextView
+                    android:id="@+id/txv_animal_owner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textSize="@dimen/xl_text" />
+            </LinearLayout>
+
+            <!--        &lt;!&ndash; Кнопка для редактирования &ndash;&gt;-->
+            <!--        <Button-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_gravity="center"-->
+            <!--            android:layout_marginVertical="10dp"-->
+            <!--            android:backgroundTint="@android:color/holo_green_dark"-->
+            <!--            android:onClick="showAnimalEditActivity"-->
+            <!--            android:text="@string/edit_label" />-->
+
+        </LinearLayout>
+<!--    </LinearLayout>-->
+
+</LinearLayout>

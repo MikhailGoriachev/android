@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Товар</string>
+    <string name="title">Задание 2. Товар</string>
+    <string name="price_label">Цена:</string>
+    <string name="name_label">Название:</string>
+    <string name="amount_label">Количество:</string>
+    <string name="input_block_label">Ввод данных</string>
+    <string name="default_value">——</string>
+    <string name="coast_label">Стоимость:</string>
+    <string name="save_btn_label">Сохранить</string>
+    <string name="exit_btn_label">Выход</string>
+</resources>

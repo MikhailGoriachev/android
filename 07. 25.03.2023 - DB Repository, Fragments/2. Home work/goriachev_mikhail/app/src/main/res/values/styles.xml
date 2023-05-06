@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="OptionKey">
+        <item name="android:textSize">@dimen/xs_text</item>
+        <item name="android:paddingEnd">5dp</item>
+    </style>
+
+    <style name="OptionValue">
+        <item name="android:textSize">@dimen/xs_text</item>
+    </style>
+
+    <style name="OptionKeyFirstLine">
+        <item name="android:textSize">@dimen/xl_text</item>
+        <item name="android:paddingEnd">5dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="OptionValueFirstLine">
+        <item name="android:textSize">@dimen/xl_text</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CardImage">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+</resources>

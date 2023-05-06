@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mni_start_service"
+        android:title="@string/start_service_title" />
+    <item
+        android:id="@+id/mni_stop_service"
+        android:title="@string/stop_service_title" />
+    <item
+        android:id="@+id/mni_info"
+        android:title="@string/info_title" />
+    <item
+        android:id="@+id/mni_settings"
+        android:title="@string/settings_title" />
+    <item
+        android:id="@+id/mni_exit"
+        android:title="@string/app_exit_label" />
+</menu>

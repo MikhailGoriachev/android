@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <EditTextPreference
+        android:defaultValue="messages.json"
+        android:key="messenger_file_name"
+        android:summary="Введите имя файла для сохранения сообщений"
+        android:title="Файл сохранения" />
+
+    <SeekBarPreference
+        android:defaultValue="3"
+        android:key="period"
+        android:max="60"
+        android:summary="Период запуска сервиса, в секундах"
+        android:title="Период"
+        app:min="1"
+        app:showSeekBarValue="true" />
+
+    <SeekBarPreference
+        android:defaultValue="2"
+        android:key="delay"
+        android:max="60"
+        android:summary="Время задержки запуска сервиса, в секундах"
+        android:title="Задержка"
+        app:min="1"
+        app:showSeekBarValue="true" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="is_restore_fields"
+        android:summary="Сохранение и восстановление последних значений формы"
+        android:title="Восстановление полей" />
+
+
+</PreferenceScreen>

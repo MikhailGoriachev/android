@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!-- Информация о домашнем животном -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/animal_item_title"
+                android:textSize="@dimen/xxl_text" />
+
+            <!-- Поля -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="10dp"
+                android:weightSum="100">
+
+                <ImageView
+                    android:id="@+id/ivw_animal_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="70"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/icon" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+                    android:orientation="vertical"
+                    android:paddingVertical="10dp">
+
+                    <!-- Кличка -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="@string/animal_name_label"
+                            android:textSize="@dimen/xl_text" />
+
+                        <TextView
+                            android:id="@+id/txv_animal_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/xl_text" />
+                    </LinearLayout>
+
+                    <!-- Порода -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="@string/animal_breed_label"
+                            android:textSize="@dimen/xl_text" />
+
+                        <TextView
+                            android:id="@+id/txv_animal_breed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/xl_text" />
+                    </LinearLayout>
+
+                    <!-- Возраст -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="@string/animal_age_label"
+                            android:textSize="@dimen/xl_text" />
+
+                        <TextView
+                            android:id="@+id/txv_animal_age"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/xl_text" />
+                    </LinearLayout>
+
+                    <!-- Вес -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="@string/animal_weight_label"
+                            android:textSize="@dimen/xl_text" />
+
+                        <TextView
+                            android:id="@+id/txv_animal_weight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/xl_text" />
+                    </LinearLayout>
+
+                    <!-- Владелец -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="@string/animal_owner_label"
+                            android:textSize="@dimen/xl_text" />
+
+                        <TextView
+                            android:id="@+id/txv_animal_owner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/xl_text" />
+                    </LinearLayout>
+
+                    <!-- Кнопка для редактирования -->
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="10dp"
+                        android:backgroundTint="@android:color/holo_green_dark"
+                        android:onClick="showAnimalEditActivity"
+                        android:text="@string/edit_label" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Информация о торговом судне -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ship_item_title"
+                android:textSize="@dimen/xxl_text" />
+
+
+            <ImageView
+                android:id="@+id/ivw_ship_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/icon" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingVertical="10dp">
+
+                <!-- Тип судна -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:text="@string/ship_type_label"
+                        android:textSize="@dimen/xl_text" />
+
+                    <TextView
+                        android:id="@+id/txv_ship_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/xl_text" />
+                </LinearLayout>
+
+                <!-- Грузоподъёмность -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:text="@string/ship_load_capacity_label"
+                        android:textSize="@dimen/xl_text" />
+
+                    <TextView
+                        android:id="@+id/txv_ship_load_capacity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/xl_text" />
+                </LinearLayout>
+
+                <!-- Пункт назанчения -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:text="@string/ship_destination_label"
+                        android:textSize="@dimen/xl_text" />
+
+                    <TextView
+                        android:id="@+id/txv_ship_destination"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/xl_text" />
+                </LinearLayout>
+
+                <!-- Тип груза -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:text="@string/ship_weight_type_label"
+                        android:textSize="@dimen/xl_text" />
+
+                    <TextView
+                        android:id="@+id/txv_ship_weight_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/xl_text" />
+                </LinearLayout>
+
+                <!-- Вес груза -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:text="@string/ship_weight_label"
+                        android:textSize="@dimen/xl_text" />
+
+                    <TextView
+                        android:id="@+id/txv_ship_weight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/xl_text" />
+                </LinearLayout>
+
+                <!-- Цена (1 тонна) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:text="@string/ship_price_label"
+                        android:textSize="@dimen/xl_text" />
+
+                    <TextView
+                        android:id="@+id/txv_ship_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/xl_text" />
+                </LinearLayout>
+
+                <!-- Кнопка для редактирования -->
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@android:color/holo_green_dark"
+                    android:onClick="showShipEditActivity"
+                    android:text="@string/edit_label" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Кнопка выхода -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="10dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:onClick="finish"
+            android:text="@string/app_exit_label" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Домашнее задание (Горячев)</string>
+    <string name="animal_item_title">Домашнее животное</string>
+    <string name="animal_name_label">Кличка:</string>
+    <string name="animal_breed_label">Порода:</string>
+    <string name="animal_age_label">Возраст:</string>
+    <string name="animal_weight_label">Вес:</string>
+    <string name="animal_owner_label">Владелец:</string>
+    <string name="edit_label">Редактировать</string>
+    <string name="ship_item_title">Торговое судно</string>
+    <string name="ship_type_label">Тип судна:</string>
+    <string name="ship_load_capacity_label">Грузоподъёмность (тонна):</string>
+    <string name="ship_destination_label">Пункт назначения:</string>
+    <string name="ship_weight_type_label">Тип груза:</string>
+    <string name="ship_weight_label">Вес груза (тонна):</string>
+    <string name="ship_price_label">Цена:</string>
+    <string name="app_exit_label">Выход</string>
+    <string name="hint_animal_name">Введите кличку животного</string>
+    <string name="hint_animal_breed">Введите породу животного</string>
+    <string name="hint_animal_age">Введите возраст от 0 лет</string>
+    <string name="hint_animal_weight">Введите вес от 0,1 кг</string>
+    <string name="hint_animal_owner">Введите владельца животного</string>
+    <string name="increase_label">+</string>
+    <string name="decrease_label">—</string>
+    <string name="description_image_animal">Изображение животного</string>
+    <string name="cancel_label">Отмена</string>
+    <string name="save_label">Сохранить</string>
+    <string name="reset_label">Сбросить</string>
+    <string name="edit_animal_title">Редактирование животного</string>
+    <string name="description_image_ship">Изображение судна</string>
+    <string name="hint_ship_load_capacity">Грузоподъёмность судна от 0 (тонна)</string>
+    <string name="hint_ship_destination">Введите пункт назначения</string>
+    <string name="hint_ship_weight_label">Вес груза от 0 (тонна)</string>
+    <string name="ship_cost_label">Стоимость:</string>
+</resources>

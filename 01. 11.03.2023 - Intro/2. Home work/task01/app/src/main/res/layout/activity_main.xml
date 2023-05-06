@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:paddingHorizontal="15dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/title"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="22sp" />
+
+    <!-- Сторона A -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="@string/side_a_label"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txv_side_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_value"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <!-- Сторона B -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="@string/side_b_label"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txv_side_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_value"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <!-- Сторона C -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="@string/side_с_label"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txv_side_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_value"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <!-- Блок результата обработки -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/result_label"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:textAlignment="center"/>
+
+    <!-- Результат -->
+    <TextView
+        android:id="@+id/txv_result_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="20sp"/>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <!-- Генерация -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:text="@string/init_btn_label"
+            android:onClick="generation"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <!-- Периметр -->
+        <Button
+            android:id="@+id/btn_perimeter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:text="@string/perimeter_btn_label"
+            android:onClick="perimeter"/>
+
+        <!-- Площадь -->
+        <Button
+            android:id="@+id/btn_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:text="@string/area_btn_label"
+            android:onClick="area"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ShipEditActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!-- Ввод информация о судне -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Заголовок -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_ship_title"
+                android:textAlignment="center"
+                android:textSize="@dimen/xxl_text" />
+
+
+            <!-- Изображение -->
+            <ImageView
+                android:id="@+id/ivw_ship_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/description_image_ship"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/icon" />
+
+            <!-- Тип судна -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ship_type_label"
+                android:textSize="@dimen/xl_text" />
+
+            <Spinner
+                android:id="@+id/spn_ship_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"/>
+
+
+            <!-- Грузоподъёмность судна -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@id/etx_ship_load_capacity"
+                android:text="@string/ship_load_capacity_label"
+                android:textSize="@dimen/xl_text" />
+
+            <EditText
+                android:id="@+id/etx_ship_load_capacity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:autofillHints=""
+                android:hint="@string/hint_ship_load_capacity"
+                android:inputType="number"
+                android:textSize="@dimen/xl_text" />
+
+            <!-- Тип судна -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@id/etx_ship_destination"
+                android:text="@string/ship_destination_label"
+                android:textSize="@dimen/xl_text" />
+
+            <EditText
+                android:id="@+id/etx_ship_destination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:autofillHints=""
+                android:hint="@string/hint_ship_destination"
+                android:inputType="text"
+                android:textSize="@dimen/xl_text" />
+
+            <!-- Тип груза -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@id/spn_ship_cargo_type"
+                android:text="@string/ship_weight_type_label"
+                android:textSize="@dimen/xl_text" />
+
+
+            <Spinner
+                android:id="@+id/spn_ship_cargo_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Вес груза -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@id/etx_ship_weight"
+                android:text="@string/ship_weight_label"
+                android:textSize="@dimen/xl_text" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <EditText
+                    android:id="@+id/etx_ship_weight"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="80"
+                    android:autofillHints=""
+                    android:hint="@string/hint_ship_weight_label"
+                    android:inputType="number"
+                    android:textSize="@dimen/xl_text" />
+
+                <!-- Увеличить на вес груза на 20 тонн -->
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_weight="10"
+                    android:onClick="increaseCargoWeight"
+                    android:text="@string/increase_label" />
+
+                <!-- Уменьшить на вес груза на 20 тонн -->
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:onClick="decreaseCargoWeight"
+                    android:text="@string/decrease_label" />
+            </LinearLayout>
+
+            <!-- Цена -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@id/etx_ship_price"
+                android:text="@string/ship_price_label"
+                android:textSize="@dimen/xl_text" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <EditText
+                    android:id="@+id/etx_ship_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="80"
+                    android:autofillHints=""
+                    android:hint="@string/hint_ship_price_label"
+                    android:inputType="number"
+                    android:textSize="@dimen/xl_text" />
+
+                <!-- Увеличить за 1 тонну груза на 10$ -->
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_weight="10"
+                    android:onClick="increasePrice"
+                    android:text="@string/increase_label" />
+
+                <!-- Уменьшить за 1 тонну груза на 10$ -->
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:onClick="decreasePrice"
+                    android:text="@string/decrease_label" />
+            </LinearLayout>
+
+            <!-- Стоимость -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/ship_cost_label"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/xxl_text"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txv_ship_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/xxl_text"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Якорная стоянка -->
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/swt_ship_anchorage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ship_anchorage" />
+
+            <!-- Дозаправка топливом -->
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/swt_ship_refueling"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ship_refueling_label" />
+
+            <!-- Специальный пирс для разгрузки -->
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/swt_ship_special_pier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ship_special_pier_label" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- Кнопка "Сохранить" -->
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/holo_green_dark"
+                android:onClick="save"
+                android:text="@string/save_label" />
+
+            <!-- Кнопка "Сбросить" -->
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                android:onClick="reset"
+                android:text="@string/reset_label" />
+
+            <!-- Кнопка "Отмена" -->
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:onClick="finish"
+                android:text="@string/cancel_label" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

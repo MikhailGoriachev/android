@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!--- Наименование -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txl_title"
+            style="?attr/textInputOutlinedStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:errorEnabled="true"
+            android:hint="@string/label_title">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--- Индекс -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txl_index"
+            style="?attr/textInputOutlinedStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="@string/label_index">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_index"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--- Цена -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txl_price"
+            style="?attr/textInputOutlinedStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="@string/label_price">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--- Длительность подписки -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txl_duration"
+            style="?attr/textInputOutlinedStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="@string/label_duration">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--- Тип издания -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="@string/label_publication_type">
+
+            <AutoCompleteTextView
+                android:id="@+id/acp_publication_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Дата подписки -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:labelFor="@id/acp_publication_type"
+            android:text="@string/label_subscribe_date"
+            android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
+
+        <Button
+            android:id="@+id/btn_subscribe_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="@string/label_select_date" />
+
+
+    </LinearLayout>
+</ScrollView>

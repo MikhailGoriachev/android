@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Треугольник</string>
+    <string name="title">Задание 1. Треугольник</string>
+    <string name="side_a_label">Сторона A:</string>
+    <string name="default_value">——</string>
+    <string name="side_b_label">Сторона B:</string>
+    <string name="side_с_label">Сторона C:</string>
+    <string name="solve_title">Результат</string>
+    <string name="result_label">Результат обработки</string>
+    <string name="init_btn_label">Генерация</string>
+    <string name="perimeter_btn_label">Периметр</string>
+    <string name="area_btn_label">Площадь</string>
+</resources>

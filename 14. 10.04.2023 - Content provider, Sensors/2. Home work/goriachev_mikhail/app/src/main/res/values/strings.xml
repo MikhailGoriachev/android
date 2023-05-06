@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Домашнее задание</string>
+    <string name="app_exit_label">Выход</string>
+    <string name="info_title">О приложении</string>
+
+    <string name="image_default_description">Изображение</string>
+
+    <string name="add_label">Добавить</string>
+    <string name="delete_label">Удалить</string>
+    <string name="edit_label">Редактировать</string>
+
+    <string name="ok_label">OK</string>
+    <string name="search_label">Поиск</string>
+    <string name="calculate_label">Вычислить</string>
+    <string name="execute_label">Выполнить</string>
+    <string name="cancel_label">Отмена</string>
+    <string name="save_label">Сохранить</string>
+    <string name="reset_label">Сбросить</string>
+    <string name="back_label">Назад</string>
+
+    <string name="default_value">——</string>
+
+    <string name="label_id">id:</string>
+    <string name="label_index">Индекс</string>
+    <string name="label_title">Наименование</string>
+    <string name="label_price">Цена</string>
+    <string name="label_duration">Длительность подписки</string>
+    <string name="label_publication_type">Тип издания</string>
+    <string name="label_subscribe_date">Дата подписки</string>
+    <string name="label_select_date">Выберите дату</string>
+
+</resources>

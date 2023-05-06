@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lay_ship_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivw_ship_image"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="10dp"
+        android:scaleType="centerCrop"
+        app:riv_border_color="#333"
+        app:riv_border_width="0dp"
+        app:riv_corner_radius="35dp"
+        app:srcCompat="@drawable/icon" />
+
+    <!-- Информация о домашнем животном -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Тип судна -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="@string/ship_type_label"
+                android:textSize="@dimen/xl_text" />
+
+            <TextView
+                android:id="@+id/txv_ship_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textSize="@dimen/xl_text" />
+        </LinearLayout>
+
+        <!-- Вес груза -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="@string/ship_weight_label"
+                android:textSize="@dimen/xl_text" />
+
+            <TextView
+                android:id="@+id/txv_ship_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textSize="@dimen/xl_text" />
+        </LinearLayout>
+
+        <!-- Цена (1 тонна) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="@string/ship_price_label"
+                android:textSize="@dimen/xl_text" />
+
+            <TextView
+                android:id="@+id/txv_ship_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textSize="@dimen/xl_text" />
+        </LinearLayout>
+
+        <!-- Стоимость -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="@string/ship_cost_label"
+                android:textSize="@dimen/xl_text" />
+
+            <TextView
+                android:id="@+id/txv_ship_cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textSize="@dimen/xl_text" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

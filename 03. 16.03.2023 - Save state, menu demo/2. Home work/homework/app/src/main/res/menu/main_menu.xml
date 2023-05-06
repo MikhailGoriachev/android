@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mni_edit_animal"
+        android:title="@string/edit_animal_title" />
+    <item
+        android:id="@+id/mni_edit_ship"
+        android:title="@string/edit_ship_title" />
+    <item
+        android:id="@+id/mni_exit"
+        android:title="@string/app_exit_label" />
+</menu>

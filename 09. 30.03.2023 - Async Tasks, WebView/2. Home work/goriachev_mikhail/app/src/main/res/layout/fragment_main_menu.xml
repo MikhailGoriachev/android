@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.MainMenuFragment">
+
+    <LinearLayout
+        android:id="@+id/lay_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/btn_query01_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/query01_title" />
+
+        <Button
+            android:id="@+id/btn_query02_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/query02_title" />
+
+        <Button
+            android:id="@+id/btn_query03_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/query03_title" />
+
+        <Button
+            android:id="@+id/btn_query04_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/query04_title" />
+
+        <Button
+            android:id="@+id/btn_query05_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/query05_title" />
+
+        <Button
+            android:id="@+id/btn_query06_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/query06_title" />
+
+        <Button
+            android:id="@+id/btn_query07_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/query07_title" />
+
+        <Button
+            android:id="@+id/btn_appointment_list_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/appointment_list_title" />
+
+        <Button
+            android:id="@+id/btn_doctor_list_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/doctor_list_title" />
+
+        <Button
+            android:id="@+id/btn_patient_list_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/patient_list_title" />
+
+        <Button
+            android:id="@+id/btn_person_list_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/person_list_title" />
+
+        <Button
+            android:id="@+id/btn_speciality_list_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/speciality_list_title" />
+
+        <Button
+            android:id="@+id/btn_save_appointment_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/save_appointment_list_title" />
+
+        <Button
+            android:id="@+id/btn_load_appointment_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/load_appointment_list_title" />
+
+        <Button
+            android:id="@+id/btn_info_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/info_title" />
+
+        <Button
+            android:id="@+id/btn_exit_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:text="@string/app_exit_label" />
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="is_accelerometer_sensor"
+        android:summary="Собирать данные ускорения"
+        android:title="Датчик ускорения" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="is_proximity_sensor"
+        android:summary="Собирать данные приближения"
+        android:title="Датчик приближения" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="is_light_sensor"
+        android:summary="Собирать данные освещённости"
+        android:title="Датчик освещённости" />
+
+    <SeekBarPreference
+        android:defaultValue="3"
+        android:key="period"
+        android:max="60"
+        android:summary="Период опроса датчика, в секундах"
+        android:title="Период"
+        app:min="1"
+        app:showSeekBarValue="true" />
+</PreferenceScreen>

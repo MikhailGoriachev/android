@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <!--- Получатель -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/edt_receiver"
+        android:text="@string/label_receiver"
+        android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
+
+    <EditText
+        android:id="@+id/edt_receiver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text" />
+
+    <!--- Отправитель -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/edt_sender"
+        android:text="@string/label_sender"
+        android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
+
+    <EditText
+        android:id="@+id/edt_sender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text" />
+
+    <!--- Тема -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/edt_subject"
+        android:text="@string/label_subject"
+        android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
+
+    <EditText
+        android:id="@+id/edt_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text" />
+
+    <!--- Текст -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/edt_text"
+        android:text="@string/label_text"
+        android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
+
+    <EditText
+        android:id="@+id/edt_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textLongMessage"/>
+
+
+    <!-- Вложения -->
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/swt_is_attach"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:text="@string/label_is_attach"
+        android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
+
+</LinearLayout>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <!-- Дата приёма -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/OptionKeyFirstLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_appointment_date" />
+
+        <TextView
+            android:id="@+id/txv_appointment_date"
+            style="@style/OptionValueFirstLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_value" />
+
+    </LinearLayout>
+
+    <!-- Пациент -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/OptionKey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_patient_name" />
+
+        <TextView
+            android:id="@+id/txv_patient_name"
+            style="@style/OptionValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_value" />
+
+    </LinearLayout>
+
+    <!-- Дата рождения -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/OptionKey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_patient_born_date" />
+
+        <TextView
+            android:id="@+id/txv_patient_born_date"
+            style="@style/OptionValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_value" />
+
+    </LinearLayout>
+
+    <!-- Паспорт -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/OptionKey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_patient_passport" />
+
+        <TextView
+            android:id="@+id/txv_patient_born_passport"
+            style="@style/OptionValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_value" />
+
+    </LinearLayout>
+
+    <!-- Доктор -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/OptionKey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_doctor_name" />
+
+        <TextView
+            android:id="@+id/txv_doctor_name"
+            style="@style/OptionValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_value" />
+
+    </LinearLayout>
+
+    <!-- Специальность -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/OptionKey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_speciality_name" />
+
+        <TextView
+            android:id="@+id/txv_speciality_name"
+            style="@style/OptionValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_value" />
+
+    </LinearLayout>
+
+    <!-- Процент отчислений -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/OptionKey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_doctor_percent" />
+
+        <TextView
+            android:id="@+id/txv_doctor_percent"
+            style="@style/OptionValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_value" />
+
+    </LinearLayout>
+
+    <!-- Цена приёма -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/OptionKey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_doctor_price" />
+
+        <TextView
+            android:id="@+id/txv_doctor_price"
+            style="@style/OptionValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_value" />
+
+    </LinearLayout>
+
+    <!-- Зарплата -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/OptionKey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_doctor_salary" />
+
+        <TextView
+            android:id="@+id/txv_doctor_salary"
+            style="@style/OptionValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_value" />
+
+    </LinearLayout>
+</LinearLayout>

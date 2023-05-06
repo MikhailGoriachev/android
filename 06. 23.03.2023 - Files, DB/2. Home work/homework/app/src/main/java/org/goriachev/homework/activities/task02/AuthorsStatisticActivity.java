@@ -1,0 +1,97 @@
+package org.goriachev.homework.activities.task02;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.ListView;
+import android.widget.SimpleCursorAdapter;
+
+import org.goriachev.homework.R;
+import org.goriachev.homework.middleware.BooksDatabaseHelper;
+
+public class AuthorsStatisticActivity extends AppCompatActivity {
+
+    // объект для подключения к базе данных
+    BooksDatabaseHelper helper;
+
+    // объект для работы с базой данных
+    SQLiteDatabase database;
+
+    // курсор для получения результата
+    Cursor cursor;
+
+    // представление списка данных
+    private ListView lvwAuthorsStatistic;
+
+    // адаптер для представления списка данных
+    private SimpleCursorAdapter adapter;
+
+
+    // обработка события создания активности
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_authors_statistic);
+
+        helper = new BooksDatabaseHelper(this);
+
+        lvwAuthorsStatistic = findViewById(R.id.lvw_authors_statistic);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        database = helper.open();
+
+        var sql = "select authors.id as _id, authors.name, count(books.id) as count " +
+                "from authors left join books on authors.id = books.author_id " +
+                "group by authors.id, authors.name";
+
+        cursor = database.rawQuery(sql, null);
+
+        adapter = new SimpleCursorAdapter(
+                this,
+                R.layout.view_list_item_author_statistic,
+                cursor,
+                new String[] {"_id", "name", "count"},
+                new int[] {R.id.txv_id, R.id.txv_author_name, R.id.txv_count_books }
+        );
+
+        lvwAuthorsStatistic.setAdapter(adapter);
+    }
+
+    // работа с главным меню
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.basic_menu, menu);
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    // обработка пунктов меню
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.mni_exit:
+                finish();
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    // обработка уничтожения активности
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        database.close();
+        cursor.close();
+    }
+}
